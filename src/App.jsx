@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { Music, Mic, Drum, Guitar, Disc, User, Users, Star, Music2, MessageCircle, Send, X, Play, Pause, Volume2, VolumeX, Maximize, Facebook } from 'lucide-react';
+import { Music, Mic, Drum, Guitar, Disc, User, Users, Star, Music2, MessageCircle, Send, X, Play, Pause, Volume2, VolumeX, Maximize } from 'lucide-react';
 import './index.css';
 
 const navLinks = [
@@ -28,6 +28,12 @@ const musicServices = [
 ];
 
 const eventsList = ['BODAS', 'XV AÑOS', 'EVENTOS CORPORATIVOS', 'FIESTAS PRIVADAS', 'Y MÁS'];
+
+const FacebookIcon = ({ size = 24, color = "currentColor" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+  </svg>
+);
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -442,7 +448,7 @@ export default function App() {
               <MessageCircle size={20} /> WhatsApp
             </motion.a>
             <motion.a href="https://web.facebook.com/addeocha/" target="_blank" whileHover={{ scale: 1.05, backgroundColor: '#166fe5' }} whileTap={{ scale: 0.95 }} style={{ backgroundColor: '#1877F2', color: 'white', padding: '1rem 2.5rem', borderRadius: '40px', fontWeight: 600, fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Facebook size={20} /> Facebook
+              <FacebookIcon size={20} /> Facebook
             </motion.a>
           </div>
         </motion.div>
