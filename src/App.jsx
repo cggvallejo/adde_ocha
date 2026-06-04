@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { Music, Mic, Drum, Guitar, Disc, User, Users, Star, Music2, MessageCircle, Send, X, Play, Pause, Volume2, VolumeX, Maximize } from 'lucide-react';
+import { Music, Mic, Drum, Guitar, Disc, User, Users, Star, Music2, MessageCircle, Send, X, Play, Pause, Volume2, VolumeX, Maximize, Facebook } from 'lucide-react';
 import './index.css';
 
 const navLinks = [
@@ -437,9 +437,14 @@ export default function App() {
               <p style={{ letterSpacing: '1px', fontSize: '0.9rem' }}>Messenger: Adde_Ocha</p>
             </div>
           </div>
-          <motion.a href="https://wa.me/529981348065" target="_blank" whileHover={{ scale: 1.05, backgroundColor: '#128C7E' }} whileTap={{ scale: 0.95 }} style={{ backgroundColor: '#25D366', color: 'white', padding: '1rem 2.5rem', borderRadius: '40px', fontWeight: 600, fontSize: '1.1rem', display: 'inline-block' }}>
-            Contactar por WhatsApp
-          </motion.a>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <motion.a href="https://wa.me/529981348065" target="_blank" whileHover={{ scale: 1.05, backgroundColor: '#128C7E' }} whileTap={{ scale: 0.95 }} style={{ backgroundColor: '#25D366', color: 'white', padding: '1rem 2.5rem', borderRadius: '40px', fontWeight: 600, fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <MessageCircle size={20} /> WhatsApp
+            </motion.a>
+            <motion.a href="https://web.facebook.com/addeocha/" target="_blank" whileHover={{ scale: 1.05, backgroundColor: '#166fe5' }} whileTap={{ scale: 0.95 }} style={{ backgroundColor: '#1877F2', color: 'white', padding: '1rem 2.5rem', borderRadius: '40px', fontWeight: 600, fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Facebook size={20} /> Facebook
+            </motion.a>
+          </div>
         </motion.div>
         
         <p style={{ color: 'var(--text-light)', fontSize: '0.85rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem' }}>
